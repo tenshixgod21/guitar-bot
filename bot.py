@@ -1,8 +1,11 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from aiogram.client.session.aiohttp import AiohttpSession
 
-AiohttpSession(api="https://jolly-mode-c61a.vanya-fyodorov-04.workers.dev/")
+session = AiohttpSession(api="https://jolly-mode-c61a.vanya-fyodorov-04.workers.dev/")
+bot = Bot(token="7793645226:AAGETfsUttLsZwosS0lck2BwndkQ3yCQHPI", session=session)
+
 # 1. Вставь свой токен сюда
 BOT_TOKEN = "7793645226:AAGETfsUttLsZwosS0lck2BwndkQ3yCQHPI"
 
