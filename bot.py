@@ -4,6 +4,8 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from aiogram.client.session.aiohttp import AiohttpSession
+from aiogram.client.telegram import TelegramAPIServer
+
 
 # --- Настройки ---
 BOT_TOKEN = "7793645226:AAGETfsUttLsZwosS0lck2BwndkQ3yCQHPI"
@@ -11,7 +13,7 @@ MY_CHAT_ID = 1359579105
 PROXY_URL = "https://jolly-mode-c61a.vanya-fyodorov-04.workers.dev/"
 
 # --- Бот и диспетчер (один раз!) ---
-session = AiohttpSession(api=PROXY_URL)
+session = AiohttpSession(api=TelegramAPIServer.from_base("https://jolly-mode-c61a.vanya-fyodorov-04.workers.dev/"))
 bot = Bot(token=BOT_TOKEN, session=session)
 dp = Dispatcher()
 
