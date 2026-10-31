@@ -9,7 +9,7 @@ from aiogram.client.telegram import TelegramAPIServer
 
 
 # --- Настройки ---
-BOT_TOKEN = "7793645226:AAGETfsUttLsZwosS0lck2BwndkQ3yCQHPI"
+BOT_TOKEN = "7793645226:AAF_rGUFRi3nUXVWa4KqCkvcH2_XlRX7ngs"
 MY_CHAT_ID = 1359579105
 PROXY_URL = "https://jolly-mode-c61a.vanya-fyodorov-04.workers.dev/"
 
