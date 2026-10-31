@@ -3,6 +3,7 @@ import random
 from aiogram import Bot, Dispatcher
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+from aiogram.types import FSInputFile
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.client.telegram import TelegramAPIServer
@@ -37,9 +38,9 @@ dp = Dispatcher()
 # --- Обработчик /start ---
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
-    photo_url = "https://static.wikia.nocookie.net/rezero/images/6/64/Beatrice_BD.png/revision/latest?cb=20170130163823&path-prefix=ru" 
+    photo = FSInputFile("bea.jpg") 
     await message.answer_photo (
-        photo=photo_url,
+        photo=photo,
         caption="Привет! Бот на связи. Мотивация из Re:Zero придёт в 10:00 утра ☀️"
     )
 
